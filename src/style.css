@@ -1,4 +1,14 @@
+body {
+  font-family: arial, sans-serif;
+}
 h1 {
   font-size: 24px;
   font-weight: 900;
+}
+.weatherapp {
+  max-width: 600px;
+  margin: 50px auto;
+  border: 2px solid #dadce0;
+  padding: 20px;
+  border-radius: 5px;
 }
