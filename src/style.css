@@ -1,7 +1,10 @@
 h1 {
   font-size: 22px;
-  font-weight: 900;
   line-height: 26px;
+}
+
+ul {
+  list-style: none;
 }
 
 .weatherapp {
