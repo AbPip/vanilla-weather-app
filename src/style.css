@@ -14,3 +14,29 @@ ul {
   padding: 20px;
   border-radius: 5px;
 }
+
+.degree {
+  line-height: 56px;
+  font-size: 48px;
+}
+
+.percentages {
+  color: #70757a;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.dateTime {
+  color: #70757a;
+  font-size: 16px;
+}
+
+#celciusFarenheit {
+  color: #202124;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 6px;
+  padding-left: 6px;
+  vertical-align: top;
+  display: inline-block;
+}
