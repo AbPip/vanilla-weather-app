@@ -53,4 +53,10 @@ ul {
 
 #farenheit {
   color: #74989c;
+  transition: all 200ms ease-in-out;
+}
+
+#farenheit:hover {
+  color: #2c3333;
+  cursor: pointer;
 }
