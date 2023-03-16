@@ -48,4 +48,7 @@ function searchCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
 }
 
+let form = document.querySelector("form");
+form.addEventListener("submit", searchCity);
+
 function defaultCurrent() {}
