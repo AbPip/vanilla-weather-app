@@ -40,11 +40,11 @@ tellingTime.innerHTML = `${day}, ${hour}:${minute}`;
 function searchCity(event) {
   event.preventDefault();
 
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${cityName}`;
+  let cityName = document.querySelector("h1");
+  let cityInput = document.querySelector("#city-input");
+  cityName.innerHTML = `${cityInput.value}`;
 
   let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
-
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
 }
 
