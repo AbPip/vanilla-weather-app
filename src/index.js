@@ -29,6 +29,9 @@ let month = months[now.getMonth()];
 
 let hour = now.getHours();
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 
 let date = now.getDate();
 let tellingTime = document.querySelector(".tellingTime");
