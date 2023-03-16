@@ -27,6 +27,9 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
+let hour = now.getHours();
+let minute = now.getMinutes();
+
 let date = now.getDate();
 let tellingTime = document.querySelector(".tellingTime");
-tellingTime.innerHTML = `${day}, ${hours}:${minutes}`;
+tellingTime.innerHTML = `${day}, ${hour}:${minute}`;
