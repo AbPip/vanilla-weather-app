@@ -26,3 +26,7 @@ let months = [
   "December",
 ];
 let month = months[now.getMonth()];
+
+let date = now.getDate();
+let tellingTime = document.querySelector(".tellingTime");
+tellingTime.innerHTML = `${day}, ${hours}:${minutes}`;
