@@ -51,4 +51,16 @@ function searchCity(event) {
 let form = document.querySelector("form");
 form.addEventListener("submit", searchCity);
 
-function defaultCurrent() {}
+function showCurrentPosition(position) {
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${apiUrl.geolocation.cityName}`;
+
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `http://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit={limit}&${apiKey}`;
+  let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
+}
+
+function getHere() {
+  navigator.geolocation.getCurrentPosition(getHere);
+}
