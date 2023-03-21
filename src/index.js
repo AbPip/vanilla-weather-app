@@ -36,30 +36,3 @@ if (minute < 10) {
 let date = now.getDate();
 let tellingTime = document.querySelector(".tellingTime");
 tellingTime.innerHTML = `${day}, ${hour}:${minute}`;
-
-function searchCity(event) {
-  event.preventDefault();
-
-  let cityName = document.querySelector("h1");
-  let cityInput = document.querySelector("#city-input");
-  cityName.innerHTML = `${cityInput.value}`;
-
-  let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
-}
-
-let form = document.querySelector("form");
-form.addEventListener("submit", searchCity);
-
-navigator.geolocation.getCurrentPosition(getHere);
-
-function getHere(position) {
-  let cityName = position.name;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${cityName}`;
-
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
-  let apiUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=3&appid=${apiKey}`;
-}
