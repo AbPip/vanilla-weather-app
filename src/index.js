@@ -30,6 +30,8 @@ function displayTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#windSpeed");
   let date = document.querySelector("#date");
+  let icon = document.querySelector("#icon");
+
   tempInteger.innerHTML = Math.round(response.data.main.temp);
   cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   description.innerHTML = response.data.weather[0].description;
@@ -38,10 +40,14 @@ function displayTemperature(response) {
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   date.innerHTML = formatDate(response.data.dt * 1000);
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
-let city = "Oslo";
+let city = "Lisbon";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
 
