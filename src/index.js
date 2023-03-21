@@ -43,7 +43,8 @@ function displayTemperature(response) {
   let description = document.querySelector("#description");
   tempInteger.innerHTML = Math.round(response.data.main.temp);
   cityName.innerHTML = response.data.name;
-  description.innerHTML = response.data.sys.country;
+  description.innerHTML = response.data.weather[0].description;
+  console.log(response.data);
 }
 
 let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
