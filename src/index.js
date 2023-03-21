@@ -40,8 +40,10 @@ tellingTime.innerHTML = `${day}, ${hour}:${minute}`;
 function displayTemperature(response) {
   let tempInteger = document.querySelector(".degree");
   let cityName = document.querySelector("#city");
+  let description = document.querySelector("#description");
   tempInteger.innerHTML = Math.round(response.data.main.temp);
   cityName.innerHTML = response.data.name;
+  description.innerHTML = response.data.sys.country;
 }
 
 let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
