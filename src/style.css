@@ -10,7 +10,6 @@ input {
 
 ul {
   list-style: none;
-  text-transform: capitalize;
 }
 
 .weatherapp {
@@ -56,6 +55,10 @@ ul {
   line-height: 56px;
   position: relative;
   top: -12px;
+}
+
+#description {
+  text-transform: capitalize;
 }
 
 #farenheit {
