@@ -71,9 +71,17 @@ ul {
 #farenheit {
   color: #74989c;
   transition: all 200ms ease-in-out;
+  text-decoration: none;
 }
 
 #farenheit:hover {
   color: #2c3333;
   cursor: pointer;
+  text-decoration: none;
+}
+
+#floatDegrees .active {
+  color: #2c3333;
+  cursor: default;
+  text-decoration: none;
 }

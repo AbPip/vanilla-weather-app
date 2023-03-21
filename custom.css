@@ -6,3 +6,8 @@ body {
 h1 {
   color: #395b64;
 }
+
+a {
+  text-decoration: none;
+  color: #74989c;
+}

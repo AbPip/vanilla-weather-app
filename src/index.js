@@ -65,6 +65,8 @@ function handleSubmit(event) {
 function switch2Farenheit(event) {
   event.preventDefault();
   let tempInteger = document.querySelector(".degree");
+  celciusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
   let farenheitTemp = (celciusTemp * 9) / 5 + 32;
   tempInteger.innerHTML = Math.round(farenheitTemp);
 }
@@ -72,6 +74,8 @@ function switch2Farenheit(event) {
 function switch2Celcius(event) {
   event.preventDefault();
   let tempInteger = document.querySelector(".degree");
+  farenheitLink.classList.remove("active");
+  celciusLink.classList.add("active");
   tempInteger.innerHTML = Math.round(celciusTemp);
 }
 
