@@ -20,7 +20,7 @@
   <body>
     <div class="container">
       <div class="weatherapp">
-        <form id="searchBar">
+        <form id="search-form">
           <div class="row">
             <div class="col-9">
               <input
@@ -36,17 +36,17 @@
           </div>
         </form>
         <div class="row">
-          <div class="col-12">
+          <div class="col-3 image"><img id="icon" src"" alt"" /></div>
+          <div class="col-3" id="celciusFarenheit">
+            <span class="degree"></span>
+            <span id="floatDegrees">°C | <span id="farenheit">°F</span></span>
+          </div>
+          <div class="col-6">
             <h1 id="location"></h1>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-2 image"><img id="icon" src"" alt"" /></div>
-          <div class="col-3" id="celciusFarenheit">
-            <span class="degree"></span>
-            <span id="floatDegrees">°C | <span id="farenheit">°F</span></span>
-          </div>
           <div class="col-3">
             <ul class="percentages">
               <li>High: <span id="high"></span>°C</li>
@@ -55,7 +55,7 @@
               <li>Wind: <span id="windSpeed"></span>Km/H</li>
             </ul>
           </div>
-          <div class="col-4">
+          <div class="col-9">
             <ul class="conditions">
               <li id="date"></li>
               <li id="description"></li>
