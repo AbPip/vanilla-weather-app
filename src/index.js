@@ -22,6 +22,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
+  console.log(response.data);
   let tempInteger = document.querySelector(".degree");
   let cityName = document.querySelector("#location");
   let description = document.querySelector("#description");
