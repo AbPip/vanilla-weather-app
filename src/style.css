@@ -61,6 +61,10 @@ ul {
   text-transform: capitalize;
 }
 
+#country {
+  text-align: right;
+}
+
 #farenheit {
   color: #74989c;
   transition: all 200ms ease-in-out;

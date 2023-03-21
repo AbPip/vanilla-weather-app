@@ -39,15 +39,13 @@ tellingTime.innerHTML = `${day}, ${hour}:${minute}`;
 
 function displayTemperature(response) {
   let tempInteger = document.querySelector(".degree");
-  let cityName = document.querySelector("#city");
-  let countryCode = document.querySelector("#country");
+  let cityName = document.querySelector("#location");
   let description = document.querySelector("#description");
   let precipitation = document.querySelector("#precipitation");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#windSpeed");
   tempInteger.innerHTML = Math.round(response.data.main.temp);
-  cityName.innerHTML = response.data.name;
-  countryCode.innerHTML = response.data.sys.country;
+  cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   description.innerHTML = response.data.weather[0].description;
   precipitation.innerHTML = "is rain";
   humidity.innerHTML = response.data.main.humidity;
