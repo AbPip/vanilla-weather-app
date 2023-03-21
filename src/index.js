@@ -41,9 +41,15 @@ function displayTemperature(response) {
   let tempInteger = document.querySelector(".degree");
   let cityName = document.querySelector("#city");
   let description = document.querySelector("#description");
+  let precipitation = document.querySelector("#precipitation");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#windSpeed");
   tempInteger.innerHTML = Math.round(response.data.main.temp);
   cityName.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
+  precipitation.innerHTML = "is rain";
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
   console.log(response.data);
 }
 
