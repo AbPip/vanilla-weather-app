@@ -20,22 +20,27 @@
   <body>
     <div class="container">
       <div class="weatherapp">
-        <div class="row">
-          <div class="col-6">
-            <form id="searchBar">
+        <form id="searchBar">
+          <div class="row">
+            <div class="col-9">
               <input
                 type="search"
                 placeholder="Search for a city"
                 class="form-control"
                 id="city-input"
               />
-              <input type="submit" value="OK" />
-            </form>
+            </div>
+            <div class="col-2">
+              <input type="submit" value="OK" class="form-control" />
+            </div>
           </div>
-          <div class="col-6">
+        </form>
+        <div class="row">
+          <div class="col-12">
             <h1 id="location"></h1>
           </div>
         </div>
+
         <div class="row">
           <div class="col-2 image"><img id="icon" src"" alt"" /></div>
           <div class="col-3" id="celciusFarenheit">
