@@ -39,9 +39,9 @@ ul {
   padding: 0px;
 }
 
-.dateTime {
+.conditions {
   color: #74989c;
-  font-size: 16px;
+  font-size: 14px;
   text-align: right;
 }
 #celciusFarenheit {
@@ -57,7 +57,7 @@ ul {
   top: -12px;
 }
 
-#description {
+#description:first-letter {
   text-transform: capitalize;
 }
 

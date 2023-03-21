@@ -1,41 +1,25 @@
-let now = new Date();
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-let month = months[now.getMonth()];
-
-let hour = now.getHours();
-let minute = now.getMinutes();
-if (minute < 10) {
-  minute = `0${minute}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day}, ${hours}:${minutes}`;
 }
-
-let date = now.getDate();
-let tellingTime = document.querySelector(".tellingTime");
-tellingTime.innerHTML = `${day}, ${hour}:${minute}`;
 
 function displayTemperature(response) {
   let tempInteger = document.querySelector(".degree");
@@ -45,6 +29,7 @@ function displayTemperature(response) {
   let tempLow = document.querySelector("#low");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#windSpeed");
+  let date = document.querySelector("#date");
   tempInteger.innerHTML = Math.round(response.data.main.temp);
   cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   description.innerHTML = response.data.weather[0].description;
@@ -52,6 +37,7 @@ function displayTemperature(response) {
   tempLow.innerHTML = Math.round(response.data.main.temp_min);
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  date.innerHTML = formatDate(response.data.dt * 1000);
   console.log(response.data);
 }
 
