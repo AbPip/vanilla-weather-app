@@ -46,6 +46,25 @@ ul {
   text-align: right;
 }
 
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #2c3333;
+}
+
+.weather-forecase-date {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
 #celciusFarenheit {
   display: inline-block;
   padding-left: 6px;
