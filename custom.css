@@ -11,3 +11,7 @@ a {
   text-decoration: none;
   color: #74989c;
 }
+
+#ok-button {
+  min-width: 57px;
+}
