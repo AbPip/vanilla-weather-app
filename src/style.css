@@ -104,12 +104,3 @@ ul {
   cursor: default;
   text-decoration: none;
 }
-
-#myLink {
-  transition: all 200ms ease-in-out;
-}
-
-#myLink:hover {
-  text-decoration: underline;
-  color: #2c3333;
-}

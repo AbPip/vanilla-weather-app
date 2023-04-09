@@ -50,10 +50,10 @@ function displayForecast(response) {
             <div class="weather-forecast-temperature">
               <span class="weather-forecast-temperature-max">${Math.round(
                 forecastDay.temp.max
-              )}°C </span> 
+              )}°</span> 
               <span class="weather-forecast-temperature-min">${Math.round(
                 forecastDay.temp.min
-              )}°C</span>
+              )}°</span>
           </div>
         </div>`;
     }
@@ -64,7 +64,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
   let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -103,7 +102,6 @@ function displayTemperature(response) {
 function search(city) {
   let apiKey = `000e705a9dacee472a121f7e5978d1ca`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -113,32 +111,7 @@ function handleSubmit(event) {
   search(cityInput.value);
 }
 
-function switch2Farenheit(event) {
-  event.preventDefault();
-  let tempInteger = document.querySelector(".degree");
-  celciusLink.classList.remove("active");
-  farenheitLink.classList.add("active");
-  let farenheitTemp = (celciusTemp * 9) / 5 + 32;
-  tempInteger.innerHTML = Math.round(farenheitTemp);
-}
-
-function switch2Celcius(event) {
-  event.preventDefault();
-  let tempInteger = document.querySelector(".degree");
-  farenheitLink.classList.remove("active");
-  celciusLink.classList.add("active");
-  tempInteger.innerHTML = Math.round(celciusTemp);
-}
-
-let celciusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", switch2Farenheit);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", switch2Celcius);
 
 search("London");
